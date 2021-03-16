@@ -46,12 +46,22 @@
 
 }
 #ads{
-
+	min-height: 250px;
+	width: 1000px;
+	font-weight: bold;
+	font-size:18px;
+}
+#fm{
+	float: right;
+	margin-top: 100px;
 }
 #footer{
 	clear:both;
 	text-align: center;
 	padding: 20px;
+}
+#little{
+	margin-bottom: 20px;
 }
 .tekst{
 	min-height: 100px;
@@ -81,9 +91,43 @@
 h2{
 	font-size: 35px;
 }
+h3{
+	float: left;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #cb2027;
+  color: white;
+}
+
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="http://www.w3ii.com/lib/w3.css">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 </head>
 <body>
 
@@ -106,7 +150,7 @@ h2{
 		</div>
 
 		<div class="tekst">
-			32-bitowa konsola do gier wideo, wyprodukowana w Japonii przez firmę Sony Computer Entertainment, zaprojektowana przez Kena Kutaragiego.Premiera konsoli odbyła się 3 grudnia 1994 roku[1], kiedy to pierwsze egzemplarze trafiły na półki japońskich sklepów. Niecały rok później, 9 września 1995 roku, konsola ukazała się w Stanach Zjednoczonych[3], a 29 września tego samego roku w Europie[2]
+			32-bitowa konsola do gier wideo, wyprodukowana w Japonii przez firmę Sony Computer Entertainment, zaprojektowana przez Kena Kutaragiego.Premiera konsoli odbyła się 3 grudnia 1994 roku, kiedy to pierwsze egzemplarze trafiły na półki japońskich sklepów. Niecały rok później, 9 września 1995 roku, konsola ukazała się w Stanach Zjednoczonych, a 29 września tego samego roku w Europie.PlayStation 1 było prawdziwym fenomenem. Spopularyzowało gry na całym świecie. Wcześniej była to rozrywka dla dość wąskiej grupy odbiorców. Dzięki PSX grały całe rodziny. Produkowana przez ponad 10 lat (do 2006 roku konsola) rozeszła się w nakładzie około 102,5 miliona egzemplarzy. Dodatkowo niektóre z rozwiązań i akcesoriów do PlayStation wykorzystywane są do dziś. Wystarczy wspomnieć chociażby pad DualShock, który wprowadził przede wszystkim moduł wibracyjny, a także dwie analogowe gałki, aby jeszcze precyzyjniej sterować postaciami w grach – z pewnymi modyfikacjami jest stosowany do dziś w kolejnych wersjach PlayStation. Można wręcz powiedzieć, że jest to archetyp konsolowego pada.
 		</div>
 		<div class="pict">
 			<img src="logo.jpg" width="250" height="200">
@@ -115,23 +159,27 @@ h2{
 			<img src="konsola.jpg" width="250" height="200">
 		</div>
 		<div class="tekst">
-			PlayStation miała zostać stworzona we współpracy z Nintendo, jako SNES-CD – Sony miało dostarczyć czytnik CD-ROM oraz ogólnie pomóc przy architekturze systemu. Jednak z powodu różnicy zdań, Nintendo rozpoczęło współpracę z Phillips, a w 1993 roku Sony samo zaczęło prace nad swoją konsolą[9], dodając literę X do jej nazwy – po premierze systemu litera została usunięta, jednak skrót pozostał – PSX. Sprzedaż konsoli osiągnęła 100 milionów sztuk, natomiast ówczesny potentat na rynku konsol - SEGA oferujący konsolę SEGA Saturn sprzedał niespełna 10 milionów sztuk[10], a Nintendo 33 mln[11].
-
-Początkowo do konsoli został dodawany pad bez analogów, który został dodany w kolejnej rewizji. Ostatecznie została wydana trzecia edycja pada ze zmienionym kształtem grzybka.
-
-3 grudnia 2018 została wydana zminiaturyzowana wersja konsoli – PlayStation Classic[12].
+			PlayStation miała zostać stworzona we współpracy z Nintendo, jako SNES-CD – Sony miało dostarczyć czytnik CD-ROM oraz ogólnie pomóc przy architekturze systemu. Jednak z powodu różnicy zdań, Nintendo rozpoczęło współpracę z Phillips, a w 1993 roku Sony samo zaczęło prace nad swoją konsolą, dodając literę X do jej nazwy – po premierze systemu litera została usunięta, jednak skrót pozostał – PSX. Sprzedaż konsoli osiągnęła 100 milionów sztuk, natomiast ówczesny potentat na rynku konsol - SEGA oferujący konsolę SEGA Saturn sprzedał niespełna 10 milionów sztuk, a Nintendo 33 mln. Początkowo do konsoli został dodawany pad bez analogów, który został dodany w kolejnej rewizji. Ostatecznie została wydana trzecia edycja pada ze zmienionym kształtem grzybka. grudnia 2018 została wydana zminiaturyzowana wersja konsoli – PlayStation Classic.
 		</div>
-		<iframe width="1000" height="400" src="https://www.youtube.com/embed/vL6-YguJz0o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe width="1000" height="400" src="https://www.youtube.com/embed/vL6-YguJz0o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 50px;"></iframe>
 
 	</div>
 	<div id="ads">
-		<h3>Czytaj także</h3>
-		<div class="art"> <img src="news1.jpg" width="250" height="150"> <br/>Outriders w GamePass!</div>
+		<div id="little">
+		Czytaj także
+		<i class="material-icons" style="float: left;">favorite</i></div>
+		<div class="art"> <img src="news1.jpg" width="245" height="150"> <br/>Outriders w GamePass!</div>
 		<div class="art"> <img src="news2.jpg" width="250" height="150"><br/>Mulan na BlueRay</div>
 		<div class="art"> <img src="news3.jpg" width="250" height="150"><br/>Disco Elysium zmierza na PS5</div>
-		<div class="art"> <img src="news4.jpg" width="250" height="150"><br/>Internetowe Rabaty!</div>
+		<div class="art"> <img src="news4.jpg" width="245" height="150"><br/>Internetowe Rabaty!</div>
 
 	</div>
+	<div id="fm">
+		Znajdź mnie:
+	<a href="#" class="fa fa-facebook"></a>
+	<a href="#" class="fa fa-instagram"></a>
+	<a href="#" class="fa fa-linkedin"></a></div>
+	
 	<div id="footer">Wszelkie prawa zastrzeżone <br/>Szkoła Główna Gospodarstwa Wiejskiego w Warszawie<br/>Przemysław Pawlak</div>
 
 
