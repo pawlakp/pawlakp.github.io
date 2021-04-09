@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-	<meta name="description" content="Strona zaliczeniowa"/>
+	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	
 	<title>Przemysław Pawlak</title>
@@ -23,20 +23,24 @@
 			<div class="title2">Lepiej zaliczać się do niektórych, niż do wszystkich.</div>
 		</div>
 		<div class="square">
-			<div class="screen" id="screen"><script src="gra.js"></script>
+			<div class="screen" id="screen">
+				<div class="game">
+    				<div class="game-board">
+    				</div>	
+				</div>
+
 			</div>
 			<div style="clear:both;"></div>
 			<div class="title3">
-				<div class="player1">Gracz1</div>
-				<div class="pkt">0</div>
+				<div class="player1" id="player1">Gracz1</div>
+				<div class="pkt" id="pktp1">0</div>
 				<div id="podzial">:</div>
-				<div class="pkt">0</div>
-				<div class="player2">Gracz2</div>
+				<div class="pkt" id="pktp2">0</div>
+				<div class="player2" id="player2">Gracz2</div>
 			</div>
 			<div style="clear:both;"></div>
-			<div class="title4">Łatwy</div>
-			<div class="title4">Trudny</div>
-			<div class="title4">Dwóch graczy</div>
+			<div class="title4" onClick={memoryGameBOT.startGame();} >Łatwy</div>
+			<div class="title4" onClick={memoryGame.startGame();}>Dwóch graczy</div>
 		</div>
 			<div style="clear:both;"></div>
 
@@ -45,6 +49,7 @@
 	<div id="footer">
 		<h2>Wszelkie prawa zastrzeżone <br/>Szkoła Główna Gospodarstwa Wiejskiego w Warszawie<br/>Przemysław Pawlak</h2>
 	</div>
-	<div id="tutajwsadz"></div>
+	<div id="test"></div>
+	<script src="gra.js"></script>
 	</body>
 	</html>

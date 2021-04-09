@@ -1,24 +1,343 @@
-var today = new Date();
-var hourNow = today.getHours();
-var greeting;
+const memoryGame = {
+    gracz:1, //okresla kogo kolej
+    tileCount : 16, //liczba klocków
+    tileOnRow : 4, //liczba klocków na rząd
+    divBoard : null, //div z planszą gry
+    divPktp1:1,
+    divPktp2:1,
+    pkt1:0,
+    pkt2:0,
+    tiles : [], //tutaj trafi wymieszana tablica klocków
+    tilesChecked : [], //zaznaczone klocki
+    tilesImg : [ //grafiki dla klocków
+        "images/element1.png",
+        "images/element2.png",
+        "images/element3.png",
+        "images/element4.png",
+        "images/element5.png",
+        "images/element6.png",
+        "images/element7.png",
+        "images/element8.png",
+    ],
+    canGet : true, //czy można klikać na kafelki
+    tilePairs : 0, //liczba dopasowanych kafelków
 
-if(hourNow>18) {
-	greeting = 'Dobry wieczór!';
-} else if(hourNow>12){
-	greeting = 'Dzień dobry';
-} else if(hourNow > 0){
-	greeting = 'Dzień dobry';
-} else{
-	greeting='Witamy'
+    tileClick(e) {
+        if (this.canGet) {
+            //jeżeli jeszcze nie pobraliśmy 1 elementu
+            //lub jeżeli index tego elementu nie istnieje w pobranych...
+            if (!this.tilesChecked[0] || (this.tilesChecked[0].dataset.index !== e.target.dataset.index)) {
+                this.tilesChecked.push(e.target);
+                e.target.style.backgroundImage = `url(${this.tilesImg[e.target.dataset.cardType]})`;
+            }
+
+            if (this.tilesChecked.length === 2) {
+
+               
+
+                this.canGet = false;
+                if (this.tilesChecked[0].dataset.cardType === this.tilesChecked[1].dataset.cardType) {
+                    setTimeout(() => this.deleteTiles(), 500);
+                    setTimeout(() => this.zmiana(), 500);
+                } else {
+                    setTimeout(() => this.resetTiles(), 500);
+                    setTimeout(() => this.zmiana(), 500);
+                }
+
+            }
+        }
+    },
+
+    zmiana(){
+         if(this.gracz==2){
+                    this.gracz=1;
+
+                    document.getElementById("player1").style.color="red";
+                    document.getElementById("player2").style.color="white";
+
+                }else{
+                    this.gracz++;
+                    
+                    document.getElementById("player2").style.color="red";
+                    document.getElementById("player1").style.color="white";
+
+                }
+
+    },
+
+    deleteTiles() {
+
+        this.tilesChecked.forEach(el => {
+            const emptyDiv = document.createElement("div");
+            el.after(emptyDiv);
+            el.remove();
+        });
+
+        this.canGet = true;
+        this.tilesChecked = [];
+
+        this.tilePairs++;
+
+         if(this.gracz==1){
+            this.pkt1++;
+            document.getElementById("pktp1").innerText=this.pkt1;
+        }else{
+            this.pkt2++;
+            document.getElementById("pktp2").innerText=this.pkt2;
+        }
+
+
+        if (this.tilePairs >= this.tileCount / 2) {
+            if(this.pkt1>this.pkt2){alert("Wygrywa gracz 1");}
+            else{
+                alert("Wygrywa gracz 2");
+            }
+            
+        }
+    },
+
+    resetTiles() {
+        this.tilesChecked.forEach(el => el.style.backgroundImage = "");
+        this.tilesChecked = [];
+        this.canGet = true;
+    },
+
+
+    startGame() {
+        //czyścimy planszę
+        this.divBoard = document.querySelector(".game-board");
+        this.divBoard.innerHTML = "";
+
+        this.divPktp1=document.getElementById("pktp1");
+        this.divPktp1.innerHTML="0";
+        this.divPktp2=document.getElementById("pktp2");
+        this.divPktp2.innerHTML="0";
+
+        document.getElementById("player1").style.color="red";
+        document.getElementById("player2").style.color="white";
+        document.getElementById("player2").innerText="Gracz2";
+
+        //czyścimy zmienne (bo gra może się zacząć ponownie)
+        this.tiles = [];
+        this.tilesChecked = [];
+        this.gracz=1;
+        this.canGet = true;
+        this.tilePairs = 0;
+
+        //generujemy tablicę numerów klocków (parami)
+        for (let i=0; i<this.tileCount; i++) {
+            this.tiles.push(Math.floor(i/2));
+        }
+
+        //i ją mieszamy
+        for (let i=this.tileCount-1; i>0; i--) {
+            const swap = Math.floor(Math.random()*i);
+            const tmp = this.tiles[i];
+            this.tiles[i] = this.tiles[swap];
+            this.tiles[swap] = tmp;
+        }
+
+        for (let i=0; i<this.tileCount; i++) {
+            const tile = document.createElement("div");
+            tile.classList.add("game-tile");
+            this.divBoard.appendChild(tile);
+
+            tile.dataset.cardType = this.tiles[i];
+            tile.dataset.index = i;
+
+            tile.addEventListener("click", e => this.tileClick(e));
+        }
+    }
 }
 
-document.write('<h3>'+greeting+'</h3>');
+const memoryGameBOT = {
+    gracz:1, //okresla kogo kolej
+    tileCount : 16, //liczba klocków
+    tileOnRow : 4, //liczba klocków na rząd
+    divBoard : null, //div z planszą gry
+    divPktp1:1,
+    divPktp2:1,
+    pkt1:0,
+    pkt2:0,
+    tiles : [], //tutaj trafi wymieszana tablica klocków
+    tilesChecked : [], //zaznaczone klocki
+    tilesImg : [ //grafiki dla klocków
+        "images/element1.png",
+        "images/element2.png",
+        "images/element3.png",
+        "images/element4.png",
+        "images/element5.png",
+        "images/element6.png",
+        "images/element7.png",
+        "images/element8.png",
+    ],
+    canGet : true, //czy można klikać na kafelki
+    tilePairs : 0, //liczba dopasowanych kafelków
+
+    tileClick(e) {
+        if (this.canGet) {
+            //jeżeli jeszcze nie pobraliśmy 1 elementu
+            //lub jeżeli index tego elementu nie istnieje w pobranych...
+            if (!this.tilesChecked[0] || (this.tilesChecked[0].dataset.index !== e.target.dataset.index)) {
+                this.tilesChecked.push(e.target)
+                e.target.style.backgroundImage = `url(${this.tilesImg[e.target.dataset.cardType]})`;
+            }
+
+            if (this.tilesChecked.length === 2) {
+
+               
+
+                this.canGet = false;
+                if (this.tilesChecked[0].dataset.cardType === this.tilesChecked[1].dataset.cardType) {
+                    setTimeout(() => this.deleteTiles(), 500);
+                    setTimeout(() => this.zmiana(), 500);
+                } else {
+                    setTimeout(() => this.resetTiles(), 500);
+                    setTimeout(() => this.zmiana(), 500);
+                }
+
+            }
+        }
+    },
+
+    zmiana(){
+
+         if(this.gracz==2){
+                    this.gracz=1;
+
+                    document.getElementById("player1").style.color="red";
+                    document.getElementById("player2").style.color="white";
+
+                }else{
+                    this.gracz++;
+                    
+                    document.getElementById("player2").style.color="red";
+                    document.getElementById("player1").style.color="white";
+                    setTimeout(() => this.ruchBot(), 500);
+                }   
+
+    },
+    
+    ruchBot(){
+        i=0;
+        var ruch1=Math.floor(Math.random()*16);
+        var ruch2=Math.floor(Math.random()*16);
+        var test=false;
+        var test1=false;
+        var wybor1;
+        var wybor2;
+        do{
+           
+            if(ruch2==ruch1){ 
+                    ruch2=Math.floor(Math.random()*15);
+                    ruch1=Math.floor(Math.random()*15);
+                }else{
+                    if(document.getElementsByClassName("game-tile")[ruch1] !=undefined && document.getElementsByClassName("game-tile")[ruch2] !=undefined){
+                       
+                        wybor1=document.getElementsByClassName("game-tile")[ruch1];
+                        wybor2=document.getElementsByClassName("game-tile")[ruch2];
+                        i++;
+                    }
+                    else{
+                        i++;
+                        this.zmiana()    
+                    }
+                
+                    }
+            
+        }while(i<1)
+
+        
+        if(wybor1.dataset.cardType==wybor2.dataset.cardType){
+            this.pkt2++;
+            document.getElementById("pktp2").innerText=this.pkt2;
+            document.getElementsByClassName("game-tile")[ruch1].remove()
+            document.getElementsByClassName("game-tile")[ruch2].remove()
+        }
 
 
+        this.zmiana();
 
-function fajny(){
-			document.getElementById("screen").innerHTML="Łowcy, jeśli szukacie okazji do powiększenia biblioteki gier Xbox Series X|S, Xbox One lub też Xbox 360 zapoznajcie się z Wiosennymi Wyprzedażami, jakie zawitały do Microsoft Store 🙂 Przez kolejne 14 dni (promocje na gry Xbox trwają do 16 kwietnia) macie okazję zakupić o wiele taniej ponad 600 gier konsolowych – niektóre obniżki cen sięgają do 70%!";
-		}
-function nic(){
-			document.getElementById("screen").innerHTML="Nic";
-		}
+
+    },
+
+    deleteTiles() {
+
+        this.tilesChecked.forEach(el => {
+            const emptyDiv = document.createElement("div");
+            el.after(emptyDiv);
+            el.remove();
+        });
+
+        this.canGet = true;
+        this.tilesChecked = [];
+
+        this.tilePairs++;
+
+         if(this.gracz==1){
+            this.pkt1++;
+            document.getElementById("pktp1").innerText=this.pkt1;
+        }else{
+            this.pkt2++;
+            document.getElementById("pktp2").innerText=this.pkt2;
+        }
+
+
+        if (this.tilePairs >= this.tileCount / 2) {
+            alert("Udało ci się odgadnąć wszystkie obrazki");
+        }
+    },
+
+    resetTiles() {
+        this.tilesChecked.forEach(el => el.style.backgroundImage = "");
+        this.tilesChecked = [];
+        this.canGet = true;
+    },
+
+
+    startGame() {
+        //czyścimy planszę
+        this.divBoard = document.querySelector(".game-board");
+        this.divBoard.innerHTML = "";
+
+        this.divPktp1=document.getElementById("pktp1");
+        this.divPktp1.innerHTML="0";
+        this.divPktp2=document.getElementById("pktp2");
+        this.divPktp2.innerHTML="0";
+
+        document.getElementById("player1").style.color="red";
+        document.getElementById("player2").style.color="white";
+        document.getElementById("player2").innerText="Gracz2";
+
+        //czyścimy zmienne (bo gra może się zacząć ponownie)
+        this.tiles = [];
+        this.tilesChecked = [];
+        this.gracz=1;
+        this.canGet = true;
+        this.tilePairs = 0;
+
+        //generujemy tablicę numerów klocków (parami)
+        for (let i=0; i<this.tileCount; i++) {
+            this.tiles.push(Math.floor(i/2));
+        }
+
+        //i ją mieszamy
+        for (let i=this.tileCount-1; i>0; i--) {
+            const swap = Math.floor(Math.random()*i);
+            const tmp = this.tiles[i];
+            this.tiles[i] = this.tiles[swap];
+            this.tiles[swap] = tmp;
+        }
+
+        for (let i=0; i<this.tileCount; i++) {
+            const tile = document.createElement("div");
+            tile.classList.add("game-tile");
+            this.divBoard.appendChild(tile);
+
+            tile.dataset.cardType = this.tiles[i];
+            tile.dataset.index = i;
+
+            tile.addEventListener("click", e => this.tileClick(e));
+        }
+    }
+}
