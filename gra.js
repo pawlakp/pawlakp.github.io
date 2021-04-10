@@ -1,15 +1,15 @@
 const memoryGame = {
-    gracz:1, //okresla kogo kolej
-    tileCount : 16, //liczba klocków
-    tileOnRow : 4, //liczba klocków na rząd
-    divBoard : null, //div z planszą gry
+    gracz:1, 
+    tileCount : 16, 
+    tileOnRow : 4, 
+    divBoard : null, 
     divPktp1:1,
     divPktp2:1,
     pkt1:0,
     pkt2:0,
-    tiles : [], //tutaj trafi wymieszana tablica klocków
-    tilesChecked : [], //zaznaczone klocki
-    tilesImg : [ //grafiki dla klocków
+    tiles : [], 
+    tilesChecked : [], 
+    tilesImg : [ 
         "images/element1.png",
         "images/element2.png",
         "images/element3.png",
@@ -19,13 +19,12 @@ const memoryGame = {
         "images/element7.png",
         "images/element8.png",
     ],
-    canGet : true, //czy można klikać na kafelki
-    tilePairs : 0, //liczba dopasowanych kafelków
+    canGet : true, 
+    tilePairs : 0, 
 
     tileClick(e) {
         if (this.canGet) {
-            //jeżeli jeszcze nie pobraliśmy 1 elementu
-            //lub jeżeli index tego elementu nie istnieje w pobranych...
+         
             if (!this.tilesChecked[0] || (this.tilesChecked[0].dataset.index !== e.target.dataset.index)) {
                 this.tilesChecked.push(e.target);
                 e.target.style.backgroundImage = `url(${this.tilesImg[e.target.dataset.cardType]})`;
@@ -104,7 +103,8 @@ const memoryGame = {
 
 
     startGame() {
-        //czyścimy planszę
+          document.getElementById("pomoc").remove();
+      
         this.divBoard = document.querySelector(".game-board");
         this.divBoard.innerHTML = "";
 
@@ -117,19 +117,17 @@ const memoryGame = {
         document.getElementById("player2").style.color="white";
         document.getElementById("player2").innerText="Gracz2";
 
-        //czyścimy zmienne (bo gra może się zacząć ponownie)
+       
         this.tiles = [];
         this.tilesChecked = [];
         this.gracz=1;
         this.canGet = true;
         this.tilePairs = 0;
 
-        //generujemy tablicę numerów klocków (parami)
         for (let i=0; i<this.tileCount; i++) {
             this.tiles.push(Math.floor(i/2));
         }
 
-        //i ją mieszamy
         for (let i=this.tileCount-1; i>0; i--) {
             const swap = Math.floor(Math.random()*i);
             const tmp = this.tiles[i];
@@ -151,17 +149,17 @@ const memoryGame = {
 }
 
 const memoryGameBOT = {
-    gracz:1, //okresla kogo kolej
-    tileCount : 16, //liczba klocków
-    tileOnRow : 4, //liczba klocków na rząd
-    divBoard : null, //div z planszą gry
+    gracz:1, 
+    tileCount : 16, 
+    tileOnRow : 4, 
+    divBoard : null, 
     divPktp1:1,
     divPktp2:1,
     pkt1:0,
     pkt2:0,
-    tiles : [], //tutaj trafi wymieszana tablica klocków
-    tilesChecked : [], //zaznaczone klocki
-    tilesImg : [ //grafiki dla klocków
+    tiles : [], 
+    tilesChecked : [], 
+    tilesImg : [ 
         "images/element1.png",
         "images/element2.png",
         "images/element3.png",
@@ -171,13 +169,12 @@ const memoryGameBOT = {
         "images/element7.png",
         "images/element8.png",
     ],
-    canGet : true, //czy można klikać na kafelki
-    tilePairs : 0, //liczba dopasowanych kafelków
+    canGet : true, 
+    tilePairs : 0, 
 
     tileClick(e) {
         if (this.canGet) {
-            //jeżeli jeszcze nie pobraliśmy 1 elementu
-            //lub jeżeli index tego elementu nie istnieje w pobranych...
+            
             if (!this.tilesChecked[0] || (this.tilesChecked[0].dataset.index !== e.target.dataset.index)) {
                 this.tilesChecked.push(e.target)
                 e.target.style.backgroundImage = `url(${this.tilesImg[e.target.dataset.cardType]})`;
@@ -296,7 +293,8 @@ const memoryGameBOT = {
 
 
     startGame() {
-        //czyścimy planszę
+        document.getElementById("pomoc").remove();
+        
         this.divBoard = document.querySelector(".game-board");
         this.divBoard.innerHTML = "";
 
@@ -309,19 +307,19 @@ const memoryGameBOT = {
         document.getElementById("player2").style.color="white";
         document.getElementById("player2").innerText="Gracz2";
 
-        //czyścimy zmienne (bo gra może się zacząć ponownie)
+        
         this.tiles = [];
         this.tilesChecked = [];
         this.gracz=1;
         this.canGet = true;
         this.tilePairs = 0;
 
-        //generujemy tablicę numerów klocków (parami)
+        
         for (let i=0; i<this.tileCount; i++) {
             this.tiles.push(Math.floor(i/2));
         }
 
-        //i ją mieszamy
+        
         for (let i=this.tileCount-1; i>0; i--) {
             const swap = Math.floor(Math.random()*i);
             const tmp = this.tiles[i];
