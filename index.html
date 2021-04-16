@@ -9,17 +9,17 @@
 	<meta name="description" content="Strona zaliczeniowa">
 	<meta name="keywords" content="praca, domowa, zadanie">
 	<link rel="stylesheet" href="style.css" type="text/css"/>
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	<div id="container">
 		<div id="welcome">Przemysław Pawlak</div>
 		<div style="clear:both;"></div>
 		<div class="square">
-			<div class="title" onClick={fajny();}><br/>Kim jestem?</div>
-			<div class="title" onClick={nic();}><br/>Zainteresowania</div>
+			<div class="title" onClick={loadKim();}><br/>Kim jestem?</div>
+			<div class="title"><br/>Zainteresowania</div>
 			<div class="title"><br/>Kontakt</div>
-			<div class="title"><br/>Memory(Gra)</div>
+			<div class="title" onClick={loadGame();}><br/>Memory(Gra)</div>
 			<div class="title2">Lepiej zaliczać się do niektórych, niż do wszystkich.</div>
 		</div>
 		<div class="square">

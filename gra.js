@@ -293,8 +293,6 @@ const memoryGameBOT = {
 
 
     startGame() {
-        document.getElementById("pomoc").remove();
-        
         this.divBoard = document.querySelector(".game-board");
         this.divBoard.innerHTML = "";
 
@@ -338,4 +336,14 @@ const memoryGameBOT = {
             tile.addEventListener("click", e => this.tileClick(e));
         }
     }
+}
+
+function loadGame(){
+   var divSquare = $('#pomoc');
+   divSquare.html('O działa');
+}
+
+function loadKim(){
+    var divGameBoard= $('.game-board');
+    divGameBoard.empty();
 }
