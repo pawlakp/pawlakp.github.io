@@ -56,6 +56,9 @@ body{
 }
 
 @media only screen and (min-width: 768px) {
+	body{
+	background-color: #282828;
+}
 #container{
 	width: 1000px;
 	margin-left: auto;
