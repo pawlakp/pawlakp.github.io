@@ -56,20 +56,19 @@ body{
 }
 
 #container{
-	width: 100%;
+	width: 75%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 #welcome{
 	margin:20px;
-	font-size:50px;
+	font-size:38px;
 }
 
 .screen{
 	float:left;
-	height: 90%;
-	width: 84%;
+	width: 66%;
 	margin:10px;
 	background-color: #303030;
 	padding: 20px;
@@ -79,37 +78,41 @@ body{
 
 #footer{
 	text-align: center;
-	width: 90%;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
 }
 .square{
 	min-width: 500px;
 	max-width: 500px;
 }
 .title{
-	width: 92%;
+	width: 75%;
 	background-color: #536EA8;
 	margin:10px;
 	text-align: center;
+	vertical-align: middle;
 	font-size:20px;
+	height: 60px;
 }
 .title2{
 	background-color: #EA9A28;
 	margin:10px;
 	text-align: center;
-	font-size: 23px;
+	font-size: 15px;
 	padding: 20px;
 	line-height: 150%;
-	width:420px;
+	width:67%;
 	margin-top:40px;
 }
 .title3{
-	width: 480px;
+	width: 66%;
 	text-align: center;
 	margin: 10px;
-	font-size: 40px; 
+	font-size: 30px; 
 }
 .title4{
-	float:right;
+	float:left;
 	text-align: center;
 	min-width:29%;
 	max-width:29%;
@@ -131,12 +134,12 @@ body{
 
 .player1{
 	float:left;
-	width: 214px;
+	width: 145px;
 }
 
 .player2{
 	float:left;
-	width: 214px;
+	width: 145px;
 	}
 .pkt{
 	float:left;
