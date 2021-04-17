@@ -4,60 +4,9 @@ body{
 	color: #FFFFFF;
 }
 
-.game-board {
-    margin:auto;
-    position: relative;
-    overflow: hidden;
-    min-height: 250px;
-	min-width: 450px;
-	max-height: 250px;
-	max-width: 450px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    border-radius: 5px;
-    gap: 10px;
-    
-}
-
-.game-tile {
-    cursor: pointer;
-    background: #f6da17;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border-radius: 5px;
-    transition: 0.4s background-color, 0.4s box-shadow;
-}
-
-.game-tile:hover {
-    background-color:#F7C11A;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-}
-
-.game-score {
-    position: absolute;
-    left: 50%;
-    top: 0px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    padding: 30px;
-    background: tomato;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 1rem;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
-}
 
 #container{
-	width: 50%;
+	width: 75%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -150,6 +99,37 @@ body{
 }
 h2{
 	font-size: 20px;
+}
+
+.game-board {
+    margin:auto;
+    position: relative;
+    overflow: hidden;
+    min-height: 250px;
+	min-width: 300px;
+	max-height: 250px;
+	max-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    border-radius: 5px;
+    gap: 10px;
+    
+}
+
+.game-tile {
+    cursor: pointer;
+    background: #f6da17;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 5px;
+    transition: 0.4s background-color, 0.4s box-shadow;
+}
+
+.game-tile:hover {
+    background-color:#F7C11A;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
 
@@ -249,6 +229,37 @@ h2{
 }
 #podzial{
 	float:left;
+}
+
+.game-board {
+    margin:auto;
+    position: relative;
+    overflow: hidden;
+    min-height: 250px;
+	min-width: 450px;
+	max-height: 250px;
+	max-width: 450px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    border-radius: 5px;
+    gap: 10px;
+    
+}
+
+.game-tile {
+    cursor: pointer;
+    background: #f6da17;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 5px;
+    transition: 0.4s background-color, 0.4s box-shadow;
+}
+
+.game-tile:hover {
+    background-color:#F7C11A;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
 }
