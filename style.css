@@ -1,3 +1,6 @@
+
+@media only screen and (min-width: 768px) {
+
 body{
 	background-color: #282828;
 	color: #FFFFFF;
@@ -21,6 +24,8 @@ body{
 	margin:10px;
 	background-color: #303030;
 	padding: 20px;
+	font-size: 20px;
+
 }
 
 #footer{
@@ -46,7 +51,7 @@ body{
 	background-color: #EA9A28;
 	margin:10px;
 	text-align: center;
-	font-size: 26px;
+	font-size: 23px;
 	padding: 20px;
 	line-height: 150%;
 	width:420px;
@@ -77,6 +82,8 @@ body{
 .title4:hover{
 	background-color:#829747;
 }
+
+
 .player1{
 	float:left;
 	width: 214px;
@@ -165,4 +172,6 @@ input[type=submit].button {
     box-shadow: 0 2px 5px rgba(255, 99, 71, 0.4);
     border:0;
     cursor: pointer;
+}
+
 }

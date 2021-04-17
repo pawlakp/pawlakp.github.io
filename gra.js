@@ -103,7 +103,6 @@ const memoryGame = {
 
 
     startGame() {
-          document.getElementById("pomoc").remove();
       
         this.divBoard = document.querySelector(".game-board");
         this.divBoard.innerHTML = "";
@@ -303,7 +302,7 @@ const memoryGameBOT = {
 
         document.getElementById("player1").style.color="red";
         document.getElementById("player2").style.color="white";
-        document.getElementById("player2").innerText="Gracz2";
+        document.getElementById("player2").innerText="Komputer";
 
         
         this.tiles = [];
@@ -339,11 +338,60 @@ const memoryGameBOT = {
 }
 
 function loadGame(){
-   var divSquare = $('#pomoc');
-   divSquare.html('O działa');
+    var divPlayer1=$('.player1');
+    var divPlayer2=$('.player2');
+    var divPodzial=$('#podzial');
+    var divPkt= $('.pkt');
+    var divStartGame=$('.title4').eq(0);
+    var divStartGame1=$('.title4').eq(1);
+    var divStartGame0=$('.title4');
+    var divPomoc=$('#pomoc');
+
+
+    divPomoc.empty();
+    divPlayer1.html('Gracz1');
+    divPlayer2.html('Gracz2');
+    divPodzial.html(':');
+    divPkt.html('0');
+    divStartGame.html('Łatwy');
+    divStartGame1.html('Dwóch Graczy');
+
+    divStartGame0.css('background-color','#9B3E3E');
+    
+
+    divStartGame.mouseover(function(){
+        divStartGame.css('background-color','#829747');
+    });
+     divStartGame1.mouseover(function(){
+        divStartGame1.css('background-color','#829747');
+    });
+
+    divStartGame0.mouseout(function(){
+        divStartGame0.css('background-color','#9B3E3E');
+    });
+
 }
 
 function loadKim(){
     var divGameBoard= $('.game-board');
+    
+    var divPlayer1=$('.player1');
+    var divPlayer2=$('.player2');
+    var divPodzial=$('#podzial');
+    var divPkt= $('.pkt');
+    var divStartGame=$('.title4');
+
     divGameBoard.empty();
+    divPlayer1.empty();
+    divPlayer2.empty();
+    divPodzial.empty();
+    divPkt.empty();
+    divStartGame.empty();
+    divStartGame.css('background-color','#282828');
+
+    divStartGame.off("mouseover mouseout");
+
+    var divScreen=$('#pomoc');
+    divScreen.text('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed molestie tellus. Cras tincidunt sagittis mi quis pellentesque. Nunc pulvinar purus urna. Vivamus tellus nisi, semper quis tortor vitae, pellentesque ultrices urna. Duis varius volutpat magna. Nam porttitor risus eget iaculis scelerisque. Nunc vulputate, enim vel suscipit suscipit, libero sem mattis tellus, id viverra sem libero at felis. Cras consequat mollis semper. Ut lacus magna, facilisis nec placerat sodales, hendrerit vel augue. Suspendisse potenti. Sed interdum quis justo vel faucibus.');
+    
 }
