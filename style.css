@@ -1,5 +1,5 @@
 body{
-	background-color: black;
+	background-color: #282828;
 	color: #FFFFFF;
 }
 
@@ -56,7 +56,7 @@ body{
 }
 
 #container{
-	width: 769px;
+	width: 768px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -68,15 +68,82 @@ body{
 
 .screen{
 	float:left;
-	min-height: 250px;
-	min-width: 450px;
-	max-height: 250px;
-	max-width: 450px;
+	height: 90%;
+	width: 90%;
 	margin:10px;
 	background-color: #303030;
 	padding: 20px;
 	font-size: 20px;
 
+}
+
+#footer{
+	text-align: center;
+	width: 100%;
+}
+.square{
+	min-width: 500px;
+	max-width: 500px;
+}
+.title{
+	width: 220px;
+	height: 115px;
+	background-color: #536EA8;
+	margin:10px;
+	text-align: center;
+	font-size:30px;
+}
+.title2{
+	background-color: #EA9A28;
+	margin:10px;
+	text-align: center;
+	font-size: 23px;
+	padding: 20px;
+	line-height: 150%;
+	width:420px;
+	margin-top:40px;
+}
+.title3{
+	width: 480px;
+	text-align: center;
+	margin: 10px;
+	font-size: 40px; 
+}
+.title4{
+	float:right;
+	text-align: center;
+	min-width:29%;
+	max-width:29%;
+	min-height: 50px;
+	max-height: 50px;
+	background-color:#9B3E3E;
+	margin: 10px;
+	font-size: 18px;
+	display: table-cell;
+	vertical-align: middle;
+	line-height: 50px;
+
+
+}
+.title4:hover{
+	background-color:#829747;
+}
+
+
+.player1{
+	float:left;
+	width: 214px;
+}
+
+.player2{
+	float:left;
+	width: 214px;
+	}
+.pkt{
+	float:left;
+}
+#podzial{
+	float:left;
 }
 
 @media only screen and (min-width: 769px) {
