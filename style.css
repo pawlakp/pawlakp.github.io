@@ -18,7 +18,8 @@ body{
 
 .screen{
 	float:left;
-	width: 66%;
+	min-width: 66%;
+	max-width: 66%;
 	margin:10px;
 	background-color: #303030;
 	padding: 20px;
