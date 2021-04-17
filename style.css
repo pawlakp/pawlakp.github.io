@@ -56,7 +56,7 @@ body{
 }
 
 #container{
-	width: 768px;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -69,7 +69,7 @@ body{
 .screen{
 	float:left;
 	height: 90%;
-	width: 90%;
+	width: 84%;
 	margin:10px;
 	background-color: #303030;
 	padding: 20px;
@@ -79,19 +79,18 @@ body{
 
 #footer{
 	text-align: center;
-	width: 100%;
+	width: 90%;
 }
 .square{
 	min-width: 500px;
 	max-width: 500px;
 }
 .title{
-	width: 220px;
-	height: 115px;
+	width: 92%;
 	background-color: #536EA8;
 	margin:10px;
 	text-align: center;
-	font-size:30px;
+	font-size:20px;
 }
 .title2{
 	background-color: #EA9A28;
