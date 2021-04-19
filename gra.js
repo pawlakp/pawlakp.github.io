@@ -407,8 +407,8 @@ function detectmob() {
     
     if (screen && screen.width > 768) {
         divCytat2.empty();
-        divCytat.html('Idź do­kąd po­szli tam­ci do ciem­ne­go kre­su <br/>po zło­te runo ni­co­ści two­ją ostat­nią na­gro­dę')
+        divCytat.html('Idź do­kąd po­szli tam­ci do ciem­ne­go kre­su <br/>po zło­te runo ni­co­ści two­ją ostat­nią na­gro­dę');
     }else{
          divCytat.empty();
-        divCytat2.html('Idź do­kąd po­szli tam­ci do ciem­ne­go kre­su <br/>po zło­te runo ni­co­ści two­ją ostat­nią na­gro­dę')    }
+        divCytat2.html('Idź do­kąd po­szli tam­ci do ciem­ne­go kre­su <br/>po zło­te runo ni­co­ści two­ją ostat­nią na­gro­dę');   }
 }
