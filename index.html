@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="style.css" type="text/css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body>
+<body onload="detectmob();">
 	<div id="container">
 		<div id="welcome">Przemysław Pawlak</div>
 		<div style="clear:both;"></div>
@@ -21,7 +21,7 @@
 			<div class="title"><br/>Zainteresowania</div>
 			<div class="title"><br/>Kontakt</div>
 			<div class="title" onClick={loadGame();}><br/>Memory(Gra)</div>
-			<div class="title2">Idź do­kąd po­szli tam­ci do ciem­ne­go kre­su<br/>
+			<div class="title2">Idź do­kąd po­szli tam­ci do ciem­ne­go kre­su
 po zło­te runo ni­co­ści two­ją ostat­nią na­gro­dę</div>
 		</div>
 		<div class="square">
@@ -46,6 +46,7 @@ po zło­te runo ni­co­ści two­ją ostat­nią na­gro­dę</div>
 			<div class="title4" onClick={memoryGame.startGame();} id="twoplayers">Dwóch graczy</div>
 		</div>
 			<div style="clear:both;"></div>
+			<div class="title5"></div>
 
 	</div>
 	<div style="clear:both;"></div>	

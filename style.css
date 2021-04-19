@@ -150,10 +150,10 @@ h2{
 }
 .screen{
 	float:left;
-	min-height: 250px;
-	min-width: 450px;
-	max-height: 250px;
-	max-width: 450px;
+	min-height: 300px;
+	min-width: 500px;
+	max-height: 300px;
+	max-width: 500px;
 	margin:10px;
 	background-color: #303030;
 	padding: 20px;
@@ -164,6 +164,7 @@ h2{
 #footer{
 	text-align: center;
 	width: 100%;
+
 }
 .square{
 	min-width: 500px;
@@ -184,11 +185,10 @@ h2{
 	background-color: #EA9A28;
 	margin:10px;
 	text-align: center;
-	font-size: 23px;
+	font-size: 21px;
 	padding: 20px;
 	line-height: 150%;
 	width:420px;
-	margin-top:40px;
 }
 .title3{
 	width: 480px;
