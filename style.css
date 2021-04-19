@@ -35,17 +35,27 @@ body{
 	margin-right: auto;
 }
 .square{
-	min-width: 500px;
-	max-width: 500px;
+	min-width: 100%;
+	max-width: 100%;
 }
 .title{
-	width: 75%;
+	width: 100%;
 	background-color: #536EA8;
 	margin:10px;
 	text-align: center;
 	vertical-align: middle;
 	font-size:20px;
 	height: 60px;
+}
+.title2{
+	background-color: #EA9A28;
+	margin:10px;
+	text-align: center;
+	font-size: 15px;
+	padding: 20px;
+	line-height: 150%;
+	width:100%;
+	margin-top:40px;
 }
 .title3{
 	width: 66%;
@@ -154,7 +164,7 @@ h2{
 #footer{
 	text-align: center;
 	width: 100%;
-
+	margin-top: 50px;
 }
 .square{
 	min-width: 500px;
@@ -179,6 +189,7 @@ h2{
 	padding: 20px;
 	line-height: 150%;
 	width:420px;
+	margin-top:40px;
 }
 .title3{
 	width: 480px;
@@ -205,7 +216,6 @@ h2{
 .title4:hover{
 	background-color:#829747;
 }
-
 
 
 .player1{
