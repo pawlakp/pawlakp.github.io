@@ -402,9 +402,13 @@ function loadKim(){
 
 function detectmob() { 
 
+    var divCytat=$('title2');
+    var divCytat2=$('title5');
+    
     if (screen && screen.width > 768) {
-    document.getElementById('pomoc').innerHTML="To jest desktop";
-}else{
-    document.getElementById('pomoc').innerHTML="To jest mobile";
-}
+        divCytat2.empty();
+        divCytat.html('Idź do­kąd po­szli tam­ci do ciem­ne­go kre­su <br/>po zło­te runo ni­co­ści two­ją ostat­nią na­gro­dę')
+    }else{
+         divCytat.empty();
+        divCytat2.html('Idź do­kąd po­szli tam­ci do ciem­ne­go kre­su <br/>po zło­te runo ni­co­ści two­ją ostat­nią na­gro­dę')    }
 }
