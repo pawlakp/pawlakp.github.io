@@ -63,8 +63,8 @@ body{
 .title4{
 	float:left;
 	text-align: center;
-	min-width:43%;
-	max-width:43%;
+	min-width:42%;
+	max-width:42%;
 	min-height: 50px;
 	max-height: 50px;
 	background-color:#9B3E3E;
@@ -84,15 +84,15 @@ body{
 
 .player1{
 	float:left;
-	min-width: 44%;
-	max-width: 44%;
+	min-width: 42%;
+	max-width: 42%;
 	text-align: center;
 }
 
 .player2{
 	float:left;
-	min-width: 44%;
-	max-width: 44%;
+	min-width: 42%;
+	max-width: 42%;
 	text-align: center;
 	}
 .pkt{
