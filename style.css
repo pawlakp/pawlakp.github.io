@@ -54,7 +54,7 @@ body{
 	margin-top:20px;
 }
 .title3{
-	width: 66%;
+	width: 100%;
 	text-align: center;
 	margin: 10px;
 	margin-left: 0px;
@@ -84,15 +84,15 @@ body{
 
 .player1{
 	float:left;
-	min-width: 135px;
-	max-width: 135px;
+	min-width: 45%;
+	max-width: 45%;
 	text-align: center;
 }
 
 .player2{
 	float:left;
-	min-width: 135px;
-	max-width: 135px;
+	min-width: 45%;
+	max-width: 45%;
 	text-align: center;
 	}
 .pkt{
@@ -222,12 +222,14 @@ h2{
 
 .player1{
 	float:left;
-	width: 214px;
+	min-width: 214px;
+	max-width: 214px;
 }
 
 .player2{
 	float:left;
-	width: 214px;
+	min-width: 214px;
+	max-width: 214px;
 	}
 .pkt{
 	float:left;
