@@ -374,6 +374,8 @@ function loadGame(){
         divStartGame0.css('background-color','#9B3E3E');
     });
 
+    scroll_to();
+
 }
 
 function loadKim(){
@@ -398,4 +400,11 @@ function loadKim(){
     var divScreen=$('#pomoc');
     divScreen.text('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed molestie tellus. Cras tincidunt sagittis mi quis pellentesque. Nunc pulvinar purus urna. Vivamus tellus nisi, semper quis tortor vitae, pellentesque ultrices urna. Duis varius volutpat magna. Nam porttitor risus eget iaculis scelerisque. Nunc vulputate, enim vel suscipit suscipit, libero sem mattis tellus, id viverra sem libero at felis. Cras consequat mollis semper. Ut lacus magna, facilisis nec placerat sodales, hendrerit vel augue. Suspendisse potenti. Sed interdum quis justo vel faucibus.');
     
+    scroll_to();
+}
+
+function scroll_to(){
+    $('html, body').animate({
+        scrollTop: $('#screen').offset().top
+    },1000);
 }
