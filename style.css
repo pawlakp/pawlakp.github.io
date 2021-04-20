@@ -16,9 +16,6 @@ body{
 }
 
 .screen{
-	float:left;
-	min-width: 66%;
-	max-width: 66%;
 	min-height: 250px;
 	max-height: 410px;
 	margin:10px;
@@ -30,9 +27,6 @@ body{
 
 #footer{
 	text-align: center;
-	width: 75%;
-	margin-left: auto;
-	margin-right: auto;
 }
 .square{
 	min-width: 100%;
@@ -42,6 +36,7 @@ body{
 	width: 100%;
 	background-color: #536EA8;
 	margin:10px;
+	margin-left: 0px;
 	text-align: center;
 	vertical-align: middle;
 	font-size:20px;
@@ -50,17 +45,19 @@ body{
 .title2{
 	background-color: #EA9A28;
 	margin:10px;
+	margin-left: 0px;
 	text-align: center;
 	font-size: 15px;
 	padding: 20px;
 	line-height: 150%;
 	width:100%;
-	margin-top:40px;
+	margin-top:20px;
 }
 .title3{
 	width: 66%;
 	text-align: center;
 	margin: 10px;
+	margin-left: 0px;
 	font-size: 30px; 
 }
 .title4{
