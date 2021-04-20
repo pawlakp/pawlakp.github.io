@@ -63,12 +63,13 @@ body{
 .title4{
 	float:left;
 	text-align: center;
-	min-width:40%;
-	max-width:40%;
+	min-width:45%;
+	max-width:45%;
 	min-height: 50px;
 	max-height: 50px;
 	background-color:#9B3E3E;
 	margin: 10px;
+	margin-left:12px;
 	font-size: 18px;
 	display: table-cell;
 	vertical-align: middle;
@@ -83,12 +84,16 @@ body{
 
 .player1{
 	float:left;
-	width: 135px;
+	min-width: 135px;
+	max-width: 135px;
+	text-align: center;
 }
 
 .player2{
 	float:left;
-	width: 135px;
+	min-width: 135px;
+	max-width: 135px;
+	text-align: center;
 	}
 .pkt{
 	float:left;
