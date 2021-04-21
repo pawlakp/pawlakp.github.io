@@ -408,3 +408,53 @@ function scroll_to(){
         scrollTop: $('#screen').offset().top
     },1000);
 }
+
+function loadZainteresowania(){
+    var divGameBoard= $('.game-board');
+    
+    var divPlayer1=$('.player1');
+    var divPlayer2=$('.player2');
+    var divPodzial=$('#podzial');
+    var divPkt= $('.pkt');
+    var divStartGame=$('.title4');
+
+    divGameBoard.empty();
+    divPlayer1.empty();
+    divPlayer2.empty();
+    divPodzial.empty();
+    divPkt.empty();
+    divStartGame.empty();
+    divStartGame.css('background-color','#282828');
+
+    divStartGame.off("mouseover mouseout");
+
+    var divScreen=$('#pomoc');
+    divScreen.text('Jestem zainteresowny zarabianiem pieniędzy');
+    
+    scroll_to();
+}
+
+function loadKontakt(){
+    var divGameBoard= $('.game-board');
+    
+    var divPlayer1=$('.player1');
+    var divPlayer2=$('.player2');
+    var divPodzial=$('#podzial');
+    var divPkt= $('.pkt');
+    var divStartGame=$('.title4');
+
+    divGameBoard.empty();
+    divPlayer1.empty();
+    divPlayer2.empty();
+    divPodzial.empty();
+    divPkt.empty();
+    divStartGame.empty();
+    divStartGame.css('background-color','#282828');
+
+    divStartGame.off("mouseover mouseout");
+
+    var divScreen=$('#pomoc');
+    divScreen.text('Tutaj są podane formy kontaktu do mnie');
+    
+    scroll_to();
+}
