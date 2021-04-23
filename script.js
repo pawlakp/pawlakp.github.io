@@ -398,7 +398,7 @@ function loadKim(){
     divStartGame.off("mouseover mouseout");
 
     var divScreen=$('#pomoc');
-    divScreen.text('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed molestie tellus. Cras tincidunt sagittis mi quis pellentesque. Nunc pulvinar purus urna. Vivamus tellus nisi, semper quis tortor vitae, pellentesque ultrices urna. Duis varius volutpat magna. Nam porttitor risus eget iaculis scelerisque. Nunc vulputate, enim vel suscipit suscipit, libero sem mattis tellus, id viverra sem libero at felis. Cras consequat mollis semper. Ut lacus magna, facilisis nec placerat sodales, hendrerit vel augue. Suspendisse potenti. Sed interdum quis justo vel faucibus.');
+    divScreen.text('Nazywam się Przemysław Pawlak. Jestem studentem 3 roku Informatyki w Szkole Głównej Gospodarstwa Wiejskiego w Warszawie. Przez większość czasu prowadzę gospodarstwo rolne.');
     
     scroll_to();
 }
