@@ -398,7 +398,7 @@ function loadKim(){
     divStartGame.off("mouseover mouseout");
 
     var divScreen=$('#pomoc');
-    divScreen.text('Nazywam się Przemysław Pawlak. Jestem studentem 3 roku Informatyki w Szkole Głównej Gospodarstwa Wiejskiego w Warszawie. Przez większość czasu prowadzę gospodarstwo rolne.');
+    divScreen.text('Nazywam się Przemysław Pawlak. Jestem studentem 3 roku Informatyki w Szkole Głównej Gospodarstwa Wiejskiego w Warszawie. Poza tym prowadzę gospodarstwo rolne. ');
     
     scroll_to();
 }
